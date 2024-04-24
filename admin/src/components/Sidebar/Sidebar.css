@@ -1,0 +1,38 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    gap: 20px;
+    width: 100%;
+    max-width: 200px;
+    height: 130vh;
+    background: rgb(232, 232, 142);
+}
+
+.sidebar-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px 15px;
+    margin: 0px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgb(225, 204, 177);
+}
+
+@media(max-width: 800px){
+    .sidebar{
+        padding: 30px 0px;
+        flex-direction: row;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-item{
+        margin: 0px 0px;
+    }
+}

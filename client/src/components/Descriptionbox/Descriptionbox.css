@@ -1,0 +1,31 @@
+.desbox{
+    margin: 120px 170px;
+}
+.desbox-navigator{
+    display: flex;
+
+}
+.desbox-navigator-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px ;
+    font-weight: 600;
+    width: 171px;
+    height: 70px;
+    border: 1px solid #000000;
+}
+
+.desbox-navigator-box.fade{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.desbox-description{
+display: flex;
+flex-direction: column;
+gap: 25px;
+border: 1px solid #000000;
+padding: 48px;
+padding-bottom: 70px;
+}

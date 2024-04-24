@@ -1,0 +1,142 @@
+.cart-items{
+    margin: 100px 170px;
+}
+
+.cart-items hr{
+    height: 3px;
+    background-color: blueviolet;
+    border: 0;
+}
+
+.cart-items-format-main{
+    display: grid;
+    grid-template-columns: 0.9fr 2fr 1fr 1fr 1fr 1fr;
+    margin: 20px 0;
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0px;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cart-items-format{
+    display: grid;
+    grid-template-columns: 0.9fr 2fr 1fr 1fr 1fr 1fr;
+    margin: 18px 0;
+    align-items: center;
+    gap: 80px;
+    padding: 20px 0px;
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.carticon-product-icon{
+    width: 100px;
+    height: 100px;
+
+}
+
+.carticon-remove-icon{
+    width: 15px;
+    /* height: 15px; */
+    cursor: pointer;
+    margin: 0px 20px;
+}
+
+.cart-item-quantity{
+    width: 80px;
+    /* border: none; */
+    height: 50px;
+    border: 2px solid white;
+    background-color: rgb(240, 226, 226);
+}
+
+.cart-items-down{
+    display: flex;
+    margin: 100px 0px;
+}
+
+.cart-items-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 40px;
+}
+
+.cart-items-total-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+
+}
+
+.cart-items-total-button{
+    width: 250px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.vertical-line {
+
+    border-left: 2px solid black;  /* Adjust color and thickness as needed */
+    height: 350px;  /* Adjust height as needed */
+    /* margin: 0 auto;  Center the line horizontally */
+    margin-right: 30px; 
+}
+  
+.cart-items-promocode{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cart-items-promocode p{
+    /* margin: 0px 0px 10px 0px; */
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.cart-items-promobox{
+    width: 500px;
+    margin-top: 15px;
+    padding: 20px;
+    height: 58px;
+    background: #eaeaea;
+}
+
+.cart-items-promobox input{
+    height: 50px;
+    border: none;
+    outline: none;
+    /* padding: 0px 10px; */
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+}
+
+.cart-items-promobox button{
+    width: 100px;
+    margin-left:180px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.shipping{
+    text-decoration: line-through;
+}
