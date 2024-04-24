@@ -5,7 +5,7 @@ import Item from '../items/item'
 const Popular = () => {
   const [data, setData] = React.useState([]);
   React.useEffect(() => {
-    fetch("http://localhost:8080/popular")
+    fetch("https://e-commerce-app-0i4m.onrender.com/popular")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

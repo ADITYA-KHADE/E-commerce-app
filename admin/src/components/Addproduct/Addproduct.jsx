@@ -43,7 +43,7 @@ const Addproduct = () => {
       console.log(product);
 
 
-      const addProductResponse = await fetch('http://localhost:8080/addproduct', {
+      const addProductResponse = await fetch('https://e-commerce-app-0i4m.onrender.com/addproduct', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

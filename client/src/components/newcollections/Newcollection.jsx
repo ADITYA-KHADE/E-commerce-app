@@ -6,7 +6,7 @@ import Item from "../items/item";
 const Newcollection = () => {
   const [new_collection, setNew_collection] = React.useState([]);
   React.useEffect(() => {
-    fetch("http://localhost:8080/newcollection")
+    fetch("https://e-commerce-app-0i4m.onrender.com/newcollection")
       .then((res) => res.json())
       .then((data) => setNew_collection(data));
   }, []);

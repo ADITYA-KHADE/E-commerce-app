@@ -12,7 +12,7 @@ const Loginsignup = () => {
   const login = async() => {
     console.log("login",formdata)
     let responsedata;
-    await fetch('http://localhost:8080/login', {
+    await fetch('https://e-commerce-app-0i4m.onrender.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const Loginsignup = () => {
   const signup = async() => {
     console.log("signup",formdata)
     let responsedata;
-    await fetch('http://localhost:8080/signup', {
+    await fetch('https://e-commerce-app-0i4m.onrender.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -68,8 +68,7 @@ const Loginsignup = () => {
         <button type="button" onClick={()=>{state==="login"?login():signup()}}>button</button>
         {state==="signup" ? <div className="login-exist">Already have account ? <span onClick={()=>setState("login")}>Sign in here</span></div>:<></>}
         {state==="login" ? <div className="login-exist">Create an account ? <span onClick={()=>setState("signup")}>Sign up here</span></div>:<></>}
-        {/* <div className="login-exist">Already have account ? <span>Sign in here</span></div>
-        <div className="login-exist">Already have account ? <span>Sign in here</span></div> */}
+        <div className="login-exist">ADMIN Panal : <span><a href="/">Click Here</a></span></div>
         <div className="login-agree">
           <input type="checkbox" />
           <p>By clicking Sign Up, you agree to our <span>Terms of Use</span> and our <span>Privacy Policy.</span></p>
