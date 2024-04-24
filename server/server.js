@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 app.post('/upload', upload.single('product'), (req, res) => {
     res.json({ 
         success:1,
-        image_url:`https://e-commerce-app-0i4m.onrender.com/images/${req.file.filename}`,
+        image_url:`images/${req.file.filename}`,
         message: 'Image uploaded successfully'});
 });
 

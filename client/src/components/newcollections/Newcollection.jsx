@@ -20,7 +20,7 @@ const Newcollection = () => {
           return <Item
             key={i}
             id={item.id}
-            image={item.image}
+            image={`https://e-commerce-app-0i4m.onrender.com/${item.image}`}
             name={item.name}
             new_price={item.new_price}
             old_price={item.old_price}
