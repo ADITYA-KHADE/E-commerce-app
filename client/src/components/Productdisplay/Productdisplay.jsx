@@ -12,13 +12,13 @@ const Productdisplay = (props) => {
         <div className="productdisplay">
             <div className="productdisplay-left">
                 <div className="productdisplay-left-list">
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
-                    <img src={product.image} alt="" />
+                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
+                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
+                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
+                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
                 </div>
                 <div className="productdisplay-left-main">
-                    <img className="productdisplay-img-main" src={product.image} alt="" />
+                    <img className="productdisplay-img-main" src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
                 </div>
             </div>
             <div className="productdisplay-right">
