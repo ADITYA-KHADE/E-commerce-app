@@ -9,7 +9,7 @@ const Listproduct = () => {
 
   const fetchAllProducts = async () => {
     try {
-      const response = await fetch('http://localhost:8080/allproducts');
+      const response = await fetch('https://e-commerce-app-0i4m.onrender.com/allproducts');
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
@@ -61,7 +61,7 @@ const Listproduct = () => {
         <hr />
         {allproducts.map((product,index) => (
           <><div className="listproduct-format-main listproduct-format" key={index}>
-            <img src={product.image} className="listproduct-product-icon" alt="product" />
+            <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} className="listproduct-product-icon" alt="product" />
             <p>{product.name}</p>
             <p>${product.old_price}</p>
             <p>${product.new_price}</p> 
