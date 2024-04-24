@@ -25,7 +25,7 @@ const Addproduct = () => {
     let responseData;
 
     formData.append('product',image);
-    await fetch('http://localhost:8080/upload',
+    await fetch('https://e-commerce-app-0i4m.onrender.com/upload',
     {
       method:'POST',
       header:
