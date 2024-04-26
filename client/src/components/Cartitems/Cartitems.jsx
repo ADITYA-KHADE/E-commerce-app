@@ -20,7 +20,7 @@ const Cartitems = () => {
             return (
               <div>
                 <div className="cart-items-format">
-                  <img src={`https://e-commerce-app-0i4m.onrender.com/${e.image}`} alt="" className="carticon-product-icon" />
+                  <img src={e.image} alt="" className="carticon-product-icon" />
                   <p>{e.name}</p>
                   <p>${e.new_price}</p>
                   <button className="cart-item-quantity">{cart[e.id]}</button>
