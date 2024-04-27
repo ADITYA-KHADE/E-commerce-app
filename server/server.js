@@ -42,9 +42,6 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 
 app.use('/images',express.static('upload/images'));
-app.get('/', (req, res) => {
-    res.send('Hello World! ,IIIt ranchi')
-})
 
 app.post('/upload', upload.single('product'), (req, res) => {
     res.json({ 
@@ -53,6 +50,9 @@ app.post('/upload', upload.single('product'), (req, res) => {
         message: 'Image uploaded successfully'});
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello World! ,IIIt ranchi')
+})
 
 app.post('/addproduct',async (req,res)=>{
     const {name, image, category, new_price, old_price} = req.body;
