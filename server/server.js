@@ -103,6 +103,8 @@ app.get('/allproducts', async (req, res) => {
     }catch(err){
         res.json({success:0, message:err.message});
     }
+    // console.log(object);
+
 });
 
 app.post('/signup', async (req, res) => {
