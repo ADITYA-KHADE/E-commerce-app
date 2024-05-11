@@ -2,6 +2,7 @@ import React from 'react'
 import  "./Relatedproduct.css"
 import Data_product from "../assets/data"
 import Item from "../items/item"
+const apiurl=process.env.REACT_APP_SERVER_URL;
 
 const Relatedproduct = () => {
   return (
@@ -14,7 +15,7 @@ const Relatedproduct = () => {
           return <Item
             key={i}
             id={item.id}
-            image={`https://e-commerce-app-0i4m.onrender.com/${item.image}`}
+            image={`${apiurl}/${item.image}`}
             name={item.name}
             new_price={item.new_price}
             old_price={item.old_price}

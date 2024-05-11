@@ -1,6 +1,7 @@
 // import all_product from "../components/assets/all_product";
 import React, { createContext } from "react";
 import { useEffect } from "react";
+const apiurl=process.env.REACT_APP_SERVER_URL;
 
 export const ShopContext = createContext(null);
 const getDefaultcart=()=>{
@@ -18,12 +19,12 @@ const ShopContextProvider = (props) => {
 
 
   useEffect(() => {
-    fetch('https://e-commerce-app-0i4m.onrender.com/allproducts')
+    fetch(`${apiurl}/allproducts`)
     .then(res=>res.json())
     .then(data=>setAll_product(data));
 
      if(localStorage.getItem('auth-token')){
-      fetch('https://e-commerce-app-0i4m.onrender.com/getcart',{
+      fetch(`${apiurl}/getcart`,{
         method:'GET',
         headers:{
           'Content-Type':'application/json',
@@ -41,7 +42,7 @@ const ShopContextProvider = (props) => {
   const addtocart=(id)=>{
     setCart((prev)=>( {...prev,[id]:prev[id]+1}));
     if(localStorage.getItem('auth-token')){
-      fetch('https://e-commerce-app-0i4m.onrender.com/addtocart',{
+      fetch(`${apiurl}/addtocart`,{
         method:'POST',
         headers:{
           'Content-Type':'application/json',
@@ -58,7 +59,7 @@ const ShopContextProvider = (props) => {
   const removefromcart=(id)=>{
     setCart((prev)=>( {...prev,[id]:prev[id]-1}));
     if(localStorage.getItem('auth-token')){
-      fetch('https://e-commerce-app-0i4m.onrender.com/removefromcart',{
+      fetch(`${apiurl}/removefromcart`,{
         method:'POST',
         headers:{
           'Content-Type':'application/json',

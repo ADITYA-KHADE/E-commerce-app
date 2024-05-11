@@ -1,6 +1,8 @@
 import React from 'react'
 import "./style/loginsignup.css"
 import {useState} from 'react';
+const apiurl=process.env.REACT_APP_SERVER_URL;
+
 const Loginsignup = () => {
   const [state, setState] = useState("login");
   const [formdata, setFormdata] = useState({
@@ -12,7 +14,7 @@ const Loginsignup = () => {
   const login = async() => {
     console.log("login",formdata)
     let responsedata;
-    await fetch('https://e-commerce-app-0i4m.onrender.com/login', {
+    await fetch(`${apiurl}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +35,7 @@ const Loginsignup = () => {
   const signup = async() => {
     console.log("signup",formdata)
     let responsedata;
-    await fetch('https://e-commerce-app-0i4m.onrender.com/signup', {
+    await fetch(`${apiurl}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

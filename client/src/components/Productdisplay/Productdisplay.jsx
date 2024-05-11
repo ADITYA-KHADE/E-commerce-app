@@ -4,6 +4,7 @@ import { ShopContext } from '../../contexts/ShopContext';
 import "./Productdisplay.css"
 import star_icon from "../assets/star_icon.png"
 import Star_dull from "../assets/star_dull_icon.png"
+const apiurl=process.env.REACT_APP_SERVER_URL;
 
 const Productdisplay = (props) => {
     const {product}=props;
@@ -12,13 +13,13 @@ const Productdisplay = (props) => {
         <div className="productdisplay">
             <div className="productdisplay-left">
                 <div className="productdisplay-left-list">
-                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
-                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
-                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
-                    <img src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
+                    <img src={`${apiurl}/${product.image}`} alt="" />
+                    <img src={`${apiurl}/${product.image}`} alt="" />
+                    <img src={`${apiurl}/${product.image}`} alt="" />
+                    <img src={`${apiurl}/${product.image}`} alt="" />
                 </div>
                 <div className="productdisplay-left-main">
-                    <img className="productdisplay-img-main" src={`https://e-commerce-app-0i4m.onrender.com/${product.image}`} alt="" />
+                    <img className="productdisplay-img-main" src={`${apiurl}/${product.image}`} alt="" />
                 </div>
             </div>
             <div className="productdisplay-right">

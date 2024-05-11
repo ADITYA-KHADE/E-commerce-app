@@ -2,10 +2,12 @@ import React from 'react'
 import "./popular.css"
 // import Data_product from '../assets/data'
 import Item from '../items/item'
+const apiurl=process.env.REACT_APP_SERVER_URL;
+
 const Popular = () => {
   const [data, setData] = React.useState([]);
   React.useEffect(() => {
-    fetch("https://e-commerce-app-0i4m.onrender.com/popular")
+    fetch(`${apiurl}/popular`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -18,7 +20,7 @@ const Popular = () => {
                 <Item
                     key={i}
                     id={item.id}
-                    image={`https://e-commerce-app-0i4m.onrender.com/${item.image}`}
+                    image={`${apiurl}/${item.image}`}
                     name={item.name}
                     new_price={item.new_price}
                     old_price={item.old_price}

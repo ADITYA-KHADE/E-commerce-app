@@ -4,6 +4,8 @@ import "./style/category.css";
 import { ShopContext } from "../contexts/ShopContext";
 import Dropdown from "../components/assets/dropdown_icon.png";
 import Items from "../components/items/item";
+const apiurl = process.env.REACT_APP_SERVER_URL;
+
 const Category = (props) => {
   const { all_product } = useContext(ShopContext);
   return (
@@ -25,7 +27,7 @@ const Category = (props) => {
               <Items
                 key={i}
                 id={item.id}
-                image={`https://e-commerce-app-0i4m.onrender.com/${item.image}`}
+                image={`${apiurl}/${item.image}`}
                 name={item.name}
                 new_price={item.new_price}
                 old_price={item.old_price}

@@ -2,9 +2,10 @@
     display: flex;
     width: 65%;
     margin: auto;
-    padding: 0px 140px;
+    padding: 0px 100px;
     margin-bottom: 150px;
     background: rgb(142, 142, 172);
+    border-radius: 250px;
 }
 
 .offers-left{
@@ -15,13 +16,13 @@
 }
 
 .offers-left h1{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
     color: black;
 }
 
 .offers-left p{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: black;
 }
@@ -50,4 +51,9 @@
     justify-content: flex-end;
     align-items: center;
     padding: 50px;
+}
+
+.offers-right img{
+    height: auto;
+    width: 100%;
 }

@@ -2,11 +2,13 @@ import React from "react";
 import "./newcollection.css";
 // import new_collection from "../assets/new_collections";
 import Item from "../items/item";
+const apiurl=process.env.REACT_APP_SERVER_URL;
 
 const Newcollection = () => {
   const [new_collection, setNew_collection] = React.useState([]);
   React.useEffect(() => {
-    fetch("https://e-commerce-app-0i4m.onrender.com/newcollection")
+    console.log(`${apiurl}/newcollection`)
+    fetch(`${apiurl}/newcollection`)
       .then((res) => res.json())
       .then((data) => setNew_collection(data));
   }, []);
@@ -20,7 +22,7 @@ const Newcollection = () => {
           return <Item
             key={i}
             id={item.id}
-            image={`https://e-commerce-app-0i4m.onrender.com/${item.image}`}
+            image={`${apiurl}/${item.image}`}
             name={item.name}
             new_price={item.new_price}
             old_price={item.old_price}

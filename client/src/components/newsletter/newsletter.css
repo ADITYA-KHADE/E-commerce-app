@@ -10,6 +10,7 @@
     background-color: rgb(132, 132, 195);
     margin-bottom: 150px;
     gap: 30px;
+    border-radius: 250px;
 }
 
 .newsletter h1{
